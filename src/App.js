@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, Redirect } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ProfileComponent from './components/Profile';
 import Rockets from './components/Rockets';
 import Header from './components/Header';
@@ -11,7 +11,7 @@ const App = () => (
     <Header />
     <Switch>
 
-    <Route exact path="/">
+      <Route exact path="/">
         <Rockets/>
       </Route>
 
@@ -25,7 +25,7 @@ const App = () => (
         
       <Redirect from="*" to="/" />
 
-      </ Switch>
+    </ Switch>
     
   </>
 );
