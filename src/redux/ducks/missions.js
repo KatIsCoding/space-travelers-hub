@@ -1,25 +1,25 @@
-const INCREMENT = 'react-redux-setup/counter/increment';
-const DECREMENT = 'react-redux-setup/counter/decrement';
+import getMissionsFromAPI from '../../services/missionsAPI';
+
+const SET_MISSIONS = 'space-travelers-hub/missions/setMissions';
 
 const initialState = {
-  count: 0,
+  missions: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
-      return { ...state, count: state.count + 1 };
-    case DECREMENT:
-      return { ...state, count: state.count - 1 };
+    case SET_MISSIONS:
+      return { ...state, missions: action.payload };
     default:
       return state;
   }
 };
 
-export const increment = () => ({
-  type: INCREMENT,
+export const setMissions = (payload) => ({
+  type: SET_MISSIONS,
+  payload,
 });
 
-export const decrement = () => ({
-  type: DECREMENT,
-});
+export const setMissionsAsync = () => (dispatch) => {
+  getMissionsFromAPI().then((data) => dispatch(setMissions(data)));
+};

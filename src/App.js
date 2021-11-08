@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 import Header from './components/Header';
-import Missions from './components/Missions';
+import MissionList from './components/MissionList';
 import ProfileComponent from './components/Profile';
 import Rockets from './components/Rockets';
 
@@ -14,7 +14,7 @@ const App = () => (
         <Rockets />
       </Route>
       <Route path="/missions">
-        <Missions />
+        <MissionList />
       </Route>
       <Route path="/profile">
         <ProfileComponent />
