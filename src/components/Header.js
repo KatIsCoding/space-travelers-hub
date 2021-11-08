@@ -4,7 +4,7 @@ import Planet from '../assets/planet.png';
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-expand-md bg-white fixed-top">
+    <nav className="navbar navbar-expand-md bg-white">
       <div className="container-fluid">
         <img src={Planet} alt="Planet" />
         <span className="navbar-brand px-3">Space Traveler&apos;s Hub</span>
@@ -33,12 +33,12 @@ const Header = () => (
                 activeClassName="active-link"
                 exact
               >
-                My profile
+                Missions
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/profile" activeClassName="active-link" exact>
-                Missions
+                My Profile
               </NavLink>
             </li>
           </ul>
