@@ -1,3 +1,8 @@
-body {
-  margin: 0;
+.nav-item a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.active-link {
+  text-decoration: underline !important;
 }
