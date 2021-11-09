@@ -1,7 +1,14 @@
 const GET_ROCKETS = "redux/actions/get_rockets"
+const TOGGLE_RESERVATION = "redux/actions/toggle_reservation"
 
+const initialState = {
+    rockets: [],
+}
 
-const initialState = []
+export const toggleReservationAction = (reservationID) => ({
+    type: TOGGLE_RESERVATION,
+    payload: reservationID
+})
 
 const getRocketsAction = (rockets) => ({
     type: GET_ROCKETS,
@@ -18,8 +25,10 @@ export const getRocketsFunction = () => (dispatch) => {
 const rocketsReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ROCKETS:
-
-            return action.payload
+            return {...state, rockets: action.payload}
+        case TOGGLE_RESERVATION:
+            return {...state, rockets: state.rockets.map(rocket => rocket.id !== action.payload 
+              ? rocket : { ...rocket, isReserved: !rocket.isReserved })}
         default:
             return state
     }
