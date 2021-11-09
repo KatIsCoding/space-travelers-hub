@@ -26,8 +26,12 @@ const ReserveButton = ({ onClickEvent, reserved, rocketID }) => {
 
 ReserveButton.propTypes = {
   onClickEvent: PropTypes.func.isRequired,
-  reserved: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool,
   rocketID: PropTypes.number.isRequired
+};
+
+ReserveButton.defaultProps = {
+  reserved: false
 };
 
 export default ReserveButton;

@@ -52,7 +52,7 @@ Rocket.propTypes = {
 rocketData: PropTypes.shape({
   rocket_name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
 }).isRequired,
 };
