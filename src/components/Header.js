@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Planet from '../assets/planet.png';
 
 const Header = () => (
-  <header>
+  <header className="border-bottom mb-3">
     <nav className="navbar navbar-expand-md bg-white">
       <div className="container-fluid">
         <img src={Planet} alt="Planet" />

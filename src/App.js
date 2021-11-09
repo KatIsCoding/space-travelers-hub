@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import MissionList from './components/MissionList';
-import ProfileComponent from './components/Profile';
+import Profile from './components/Profile';
 import Rockets from './components/Rockets';
 
 const App = () => (
@@ -17,7 +17,7 @@ const App = () => (
         <MissionList />
       </Route>
       <Route path="/profile">
-        <ProfileComponent />
+        <Profile />
       </Route>
       <Redirect from="*" to="/" />
     </Switch>
