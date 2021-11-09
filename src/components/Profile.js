@@ -1,9 +1,10 @@
 import React from 'react';
+import RocketList from './RocketsDependencies/ProfileComponent';
 
 export default function ProfileComponent() {
   return (
     <div>
-      <h1>Profile</h1>
+      <RocketList />
     </div>
   );
 }
