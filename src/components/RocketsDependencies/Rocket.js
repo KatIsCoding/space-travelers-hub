@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { ListGroup, Badge, Image, Col, Row }  from "react-bootstrap";
-import { useDispatch , useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import ReserveButton from "./ReserveButtonComponent";
 import { toggleReservationAction } from "../../redux/rockets/rockets";
 
@@ -15,9 +15,7 @@ const invisibleBadge = {
 }
 
 const Rocket = ({ rocketData }) => {
-  const reservations = useSelector(state => state.rocketsReducer.rockets);
-  const thisReservation = reservations.find(reservation => reservation.id === rocketData.id);
-  const badgevisibility = thisReservation.isReserved ? visibleBadge : invisibleBadge;
+  const badgevisibility = rocketData.isReserved ? visibleBadge : invisibleBadge;
   const dispatch = useDispatch();
   const reserveToggle = (reservation) => {
     dispatch(toggleReservationAction(reservation));
@@ -38,7 +36,7 @@ const Rocket = ({ rocketData }) => {
     </ Badge>
     {rocketData.description}
     <br/><br/>
-    <ReserveButton reserved={thisReservation.isReserved} rocketID={rocketData.id} onClickEvent={(id) => reserveToggle(id)}/>
+    <ReserveButton reserved={rocketData.isReserved} rocketID={rocketData.id} onClickEvent={(id) => reserveToggle(id)}/>
     </Col>
     </Row>
     </ListGroup.Item>
@@ -53,6 +51,7 @@ rocketData: PropTypes.shape({
   rocket_name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  isReserved: PropTypes.bool.isRequired,
   flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
 }).isRequired,
 };
