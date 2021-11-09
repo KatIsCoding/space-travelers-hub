@@ -1,18 +1,17 @@
-
-import React from "react";
 import PropTypes from 'prop-types';
-import { ListGroup, Badge, Image, Col, Row }  from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import ReserveButton from "./ReserveButtonComponent";
-import { toggleReservationAction } from "../../redux/rockets/rockets";
+import React from 'react';
+import { Badge, Col, Image, ListGroup, Row } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { toggleReservationAction } from '../../redux/rockets/rockets';
+import ReserveButton from './ReserveButtonComponent';
 
 const visibleBadge = {
-  display: "inline-block",
-}
+  display: 'inline-block',
+};
 
 const invisibleBadge = {
-  display: "none",
-}
+  display: 'none',
+};
 
 const Rocket = ({ rocketData }) => {
   const badgevisibility = rocketData.isReserved ? visibleBadge : invisibleBadge;
@@ -20,40 +19,39 @@ const Rocket = ({ rocketData }) => {
   const reserveToggle = (reservation) => {
     dispatch(toggleReservationAction(reservation));
   };
-    return (
-
-      
+  return (
     <ListGroup.Item>
-    <Row>
-    <Col xs={2} style={{width: "fit-content"}}>
-      <Image width="300" height="180" src={rocketData.flickr_images[0]} rounded />
-    </Col>
-    <Col>
-      
-    <h3>{rocketData.rocket_name}</h3>
-    <Badge style={badgevisibility} variant="primary" pill>
-      Reserved
-    </ Badge>
-    {rocketData.description}
-    <br/><br/>
-    <ReserveButton reserved={rocketData.isReserved} rocketID={rocketData.id} onClickEvent={(id) => reserveToggle(id)}/>
-    </Col>
-    </Row>
+      <Row>
+        <Col xs={2} style={{ width: 'fit-content' }}>
+          <Image width="300" height="180" src={rocketData.flickr_images[0]} rounded />
+        </Col>
+        <Col>
+          <h3>{rocketData.rocket_name}</h3>
+          <Badge style={badgevisibility} variant="primary" pill>
+            Reserved
+          </Badge>
+          {rocketData.description}
+          <br />
+          <br />
+          <ReserveButton
+            reserved={rocketData.isReserved}
+            rocketID={rocketData.id}
+            onClickEvent={(id) => reserveToggle(id)}
+          />
+        </Col>
+      </Row>
     </ListGroup.Item>
-    )
-    }
-
-
-
+  );
+};
 
 Rocket.propTypes = {
-rocketData: PropTypes.shape({
-  rocket_name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  isReserved: PropTypes.bool.isRequired,
-  flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
-}).isRequired,
+  rocketData: PropTypes.shape({
+    rocket_name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    isReserved: PropTypes.bool.isRequired,
+    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default Rocket;

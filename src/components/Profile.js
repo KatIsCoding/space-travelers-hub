@@ -1,12 +1,11 @@
+import React from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import React from 'react';
 import RocketList from './RocketsDependencies/ProfileComponent';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missionsReducer.missions);
   const myMissions = missions.filter((mission) => mission.reserved);
-
 
   return (
     <Container fluid="md">
@@ -31,7 +30,6 @@ const Profile = () => {
         </Col>
       </Row>
     </Container>
-    
   );
 };
 
