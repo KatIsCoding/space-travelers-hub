@@ -1,20 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# React-Redux setup
+# Space Travelers Hub
 
-This is a simple yet powerful React-Redux boilerplate for later use as a starting point in other projects. It derives from `create-react-app` with a few modifications, which include installing StyleLint, ESLint, and Bootstrap, removing unimportant files, and adding some content to the remaining files. It features a functional Counter component that implements Redux for state management, using `useSelector` and `useDispatch` hooks.
+This is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions using updated technologies such as React and Redux.
 
-## Mobile
+## Screenshot
 
-![screenshot](./app_screenshot.png)
-
-## Desktop
-
-![screenshot](./app_screenshot-2.png)
-
-## Live Demo
-
-[Live Demo Link](https://dicodiaz.me/react-redux-setup/)
+![screenshot](https://media.discordapp.net/attachments/637141086334222369/907736398109474876/unknown.png?width=919&height=468)
 
 ## Built With
 
@@ -23,25 +15,16 @@ This is a simple yet powerful React-Redux boilerplate for later use as a startin
 - Bootstrap
 - VSCode
 - Git & GitHub
+- SpaceX API
 
-## Getting Started
+## Setup
 
-To get React and Redux up and running in another project, follow these simple steps:
+To get this app running locally follow these steps:
 
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
-3. Copy and paste all files and folders except app_screenshot.png, app_screenshot-2.png, MIT.md, and README.md into the other project's root folder.
-4. Run `npm install`
-5. Run `npm start`
-
-### Considerations
-
-- Intended only for use as a starting point in other projects. Do not copy and paste these files into more mature projects as this will overwrite your package.json and package-lock.json files.
-- This project also includes Bootstrap for styling.
-
-### Setup
-
-Follow the steps described before.
+3. Run `npm install`
+4. Run `npm start`
 
 ## Authors
 
@@ -50,6 +33,12 @@ Follow the steps described before.
 - GitHub: [@dicodiaz](https://github.com/dicodiaz)
 - Twitter: [@DicoDiaz1](https://twitter.com/DicoDiaz1)
 - LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan)
+
+👤 **Fabrizio Gomez Ruiz**
+
+- GitHub: [@Snow!!](https://github.com/KatIsCoding)
+- Twitter: [@fabriziogr211](https://twitter.com/fabriziogr211)
+- LinkedIn: [Fabrizio Gomez Ruiz](https://www.linkedin.com/in/fabrizio-gr)
 
 ## 🤝 Contributing
 
