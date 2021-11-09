@@ -15,18 +15,16 @@ export default (state = initialState, action) => {
     case JOIN_MISSION:
       return {
         ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.mission_id === action.id) return { ...mission, reserved: true };
-          return mission;
-        }),
+        missions: state.missions.map((mission) =>
+          mission.mission_id === action.id ? { ...mission, reserved: true } : mission,
+        ),
       };
     case LEAVE_MISSION:
       return {
         ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.mission_id === action.id) return { ...mission, reserved: false };
-          return mission;
-        }),
+        missions: state.missions.map((mission) =>
+          mission.mission_id === action.id ? { ...mission, reserved: false } : mission,
+        ),
       };
     default:
       return state;

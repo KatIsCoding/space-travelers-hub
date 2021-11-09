@@ -11,20 +11,17 @@ const Mission = ({ id, name, desc, reserved }) => {
       <td className="col-2 fw-bold">{name}</td>
       <td className="col-6">{desc}</td>
       <td className="col-2">
-        {!reserved && <Badge bg="secondary">NOT A MEMBER</Badge>}
-        {reserved && <Badge bg="primary">Active Member</Badge>}
+        <Badge bg={reserved ? 'primary' : 'secondary'}>
+          {reserved ? 'Active Member' : 'NOT A MEMBER'}
+        </Badge>
       </td>
       <td className="col-2">
-        {!reserved && (
-          <Button variant="outline-secondary" onClick={() => dispatch(joinMission(id))}>
-            Join Mission
-          </Button>
-        )}
-        {reserved && (
-          <Button variant="outline-danger" onClick={() => dispatch(leaveMission(id))}>
-            Leave Mission
-          </Button>
-        )}
+        <Button
+          variant={reserved ? 'outline-danger' : 'outline-secondary'}
+          onClick={() => dispatch(reserved ? leaveMission(id) : joinMission(id))}
+        >
+          {reserved ? 'Leave Mission' : 'Join Mission'}
+        </Button>
       </td>
     </>
   );
