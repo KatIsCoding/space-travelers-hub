@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMissionsAsync } from '../redux/ducks/missions';
+import { setMissionsAsync } from '../redux/missions/missions';
 import Mission from './Mission';
 
 let isFirstTime = true;
@@ -33,9 +33,10 @@ const Missions = () => {
             <tbody>
               {missions.map((mission) => {
                 const { mission_id: id, mission_name: name, description: desc } = mission;
+                const reserved = !!mission.reserved;
                 return (
                   <tr key={id}>
-                    <Mission name={name} desc={desc} />
+                    <Mission id={id} name={name} desc={desc} reserved={reserved} />
                   </tr>
                 );
               })}
