@@ -1,5 +1,5 @@
-const GET_ROCKETS = 'redux/actions/get_rockets';
-const TOGGLE_RESERVATION = 'redux/actions/toggle_reservation';
+export const GET_ROCKETS = 'redux/actions/get_rockets';
+export const TOGGLE_RESERVATION = 'redux/actions/toggle_reservation';
 
 const initialState = {
   rockets: [],
@@ -15,13 +15,11 @@ const getRocketsAction = (rockets) => ({
   payload: rockets,
 });
 
-export const getRocketsFunction = () => (dispatch) => {
-  fetch('https://api.spacexdata.com/v3/rockets')
+export const getRocketsFunction = () => (dispatch) => fetch('https://api.spacexdata.com/v3/rockets')
     .then((response) => response.json())
     .then((data) => {
       dispatch(getRocketsAction(data));
     });
-};
 
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
