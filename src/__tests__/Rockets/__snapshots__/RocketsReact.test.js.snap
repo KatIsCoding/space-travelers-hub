@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test UI Rendering Check if a rocket is properly rendered 1`] = `
+exports[`Rockets Reservations Check for user reservating a rocket in both rockets and profile pages 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -40,6 +40,7 @@ Object {
                 >
                   Reserved
                 </span>
+                asd
                 <br />
                 <br />
                 <button
@@ -91,6 +92,7 @@ Object {
               >
                 Reserved
               </span>
+              asd
               <br />
               <br />
               <button

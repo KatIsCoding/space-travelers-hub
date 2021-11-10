@@ -8,6 +8,8 @@ import Rockets from '../../components/Rockets';
 import { getRocketsFunction, GET_ROCKETS } from '../../redux/rockets/rockets';
 
 
+
+
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
@@ -36,18 +38,24 @@ describe("Test redux actions and action creators", () => {
   },)
 })
 
+describe("Test UI Rendering with MockStore", () => {
+  beforeEach(() => {
+    fetchMock.reset()
+    fetchMock.restore()
+    fetchMock.get('https://api.spacexdata.com/v3/rockets', [{id: 1, rocket_name: 'Falcon 1', flickr_images: ["asd"], description: "asd"}])
+  })
 
-describe("Test UI Rendering", () => {
   test("Check if a rocket is properly rendered", ()=> {
-    const tree = render(
-      <Provider store={mockStore({rocketsReducer: {rockets: [{id: 1, rocket_name: 'Falcon 1', flickr_images: ["asd"]}]}})}>
+    const secondTree = render(
+      <Provider store={mockStore({rocketsReducer: {rockets: [{id: 1, rocket_name: 'TestFalconWithMockStore', flickr_images: ["asd"]}]}})}>
         <Rockets />
       </Provider>
     )
-    expect(screen.getByText('Falcon 1')).toBeTruthy()
+
+    
+    expect(screen.getByText('TestFalconWithMockStore')).toBeTruthy()
     expect(screen.getByRole('button')).toBeTruthy()
     expect(screen.getByText('Reserved').style.display).toBe('none')  
-    expect(tree).toMatchSnapshot()
+    expect(secondTree).toMatchSnapshot()
   })
 })
-
