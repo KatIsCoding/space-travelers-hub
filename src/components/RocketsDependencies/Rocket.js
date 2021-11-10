@@ -47,7 +47,7 @@ const Rocket = ({ rocketData }) => {
 Rocket.propTypes = {
   rocketData: PropTypes.shape({
     rocket_name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     id: PropTypes.number.isRequired,
     isReserved: PropTypes.bool,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -57,6 +57,7 @@ Rocket.propTypes = {
 Rocket.defaultProps = {
   rocketData: {
     isReserved: false,
+    description: '',
   },
 };
 
