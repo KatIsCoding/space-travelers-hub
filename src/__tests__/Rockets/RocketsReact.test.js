@@ -9,6 +9,7 @@ import rocketsReducer from '../../redux/rockets/rockets';
 import missionsReducer from '../../redux/missions/missions';
 import Profile from '../../components/Profile';
 
+
 const createTestStore = () => {
   const store = createStore(
     combineReducers({
@@ -46,10 +47,12 @@ describe('Rockets Reservations', () => {
     fireEvent.click(await tree.findByRole('button'))
     expect(tree.getByText('Reserved').style.display).toBe('inline-block')  
     fireEvent.click(await tree.findByRole('button'))
-    expect(tree.getByText('Reserved').style.display).toBe('none')  
-
+    expect(tree.getByText('Reserved').style.display).toBe('none')
+    fireEvent.click(await tree.findByRole('button'))
+      
     const profile = renderMissionList(store, <Profile />);
-    expect(profile.getByText('Falcon 1')).toBeTruthy()
+    const rocketInProfile = await profile.findByTestId('rocket-in-profile')
+    expect(rocketInProfile).toBeTruthy()
 
   })
 })
