@@ -15,7 +15,8 @@ const getRocketsAction = (rockets) => ({
   payload: rockets,
 });
 
-export const getRocketsFunction = () => (dispatch) => fetch('https://api.spacexdata.com/v3/rockets')
+export const getRocketsFunction = () => (dispatch) =>
+  fetch('https://api.spacexdata.com/v3/rockets')
     .then((response) => response.json())
     .then((data) => {
       dispatch(getRocketsAction(data));
