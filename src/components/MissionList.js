@@ -35,7 +35,7 @@ const Missions = () => {
                 const { mission_id: id, mission_name: name, description: desc } = mission;
                 const reserved = !!mission.reserved;
                 return (
-                  <tr key={id}>
+                  <tr key={id} data-testid="mission">
                     <Mission id={id} name={name} desc={desc} reserved={reserved} />
                   </tr>
                 );
