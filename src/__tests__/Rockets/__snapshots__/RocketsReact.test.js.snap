@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets Reservations Check for user reservating a rocket in both rockets and profile pages 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rockets"
+      >
+        <div
+          class="list-group"
+        >
+          <div
+            class="list-group-item"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-2"
+              >
+                <img
+                  class="rounded"
+                  height="180"
+                  src="asd"
+                  width="300"
+                />
+              </div>
+              <div
+                class="col"
+              >
+                <h3>
+                  Falcon 1
+                </h3>
+                <span
+                  class="badge rounded-pill bg-primary"
+                  style="display: none;"
+                  variant="primary"
+                >
+                  Reserved
+                </span>
+                asd
+                <br />
+                <br />
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rockets"
+    >
+      <div
+        class="list-group"
+      >
+        <div
+          class="list-group-item"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-2"
+            >
+              <img
+                class="rounded"
+                height="180"
+                src="asd"
+                width="300"
+              />
+            </div>
+            <div
+              class="col"
+            >
+              <h3>
+                Falcon 1
+              </h3>
+              <span
+                class="badge rounded-pill bg-primary"
+                style="display: none;"
+                variant="primary"
+              >
+                Reserved
+              </span>
+              asd
+              <br />
+              <br />
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Reserve
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
