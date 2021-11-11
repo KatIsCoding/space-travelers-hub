@@ -10,7 +10,7 @@ const RocketList = () => {
       {rockets
         .filter((rocket) => rocket.isReserved)
         .map((rocket) => (
-          <ListGroup.Item key={rocket.id}>{rocket.rocket_name}</ListGroup.Item>
+          <ListGroup.Item data-testid="rocket-in-profile" key={rocket.id}>{rocket.rocket_name}</ListGroup.Item>
         ))}
     </ListGroup>
   );
