@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing MissionList component testing UI 1`] = `
+exports[`testing UX for missions related components testing snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -82,19 +82,19 @@ Object {
                     class="col-2"
                   >
                     <span
-                      class="badge bg-secondary"
+                      class="badge bg-primary"
                     >
-                      NOT A MEMBER
+                      Active Member
                     </span>
                   </td>
                   <td
                     class="col-2"
                   >
                     <button
-                      class="btn btn-outline-secondary"
+                      class="btn btn-outline-danger"
                       type="button"
                     >
-                      Join Mission
+                      Leave Mission
                     </button>
                   </td>
                 </tr>
@@ -367,6 +367,45 @@ Object {
           </div>
         </div>
       </div>
+      <div
+        class="container-md"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-6"
+          >
+            <h2>
+              My Missions
+            </h2>
+            <table
+              class="table table-bordered"
+            >
+              <tbody>
+                <tr
+                  data-testid="profile-mission"
+                >
+                  <td>
+                    Telstar
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="list-group"
+            >
+              <h2>
+                Rockets
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
@@ -447,19 +486,19 @@ Object {
                   class="col-2"
                 >
                   <span
-                    class="badge bg-secondary"
+                    class="badge bg-primary"
                   >
-                    NOT A MEMBER
+                    Active Member
                   </span>
                 </td>
                 <td
                   class="col-2"
                 >
                   <button
-                    class="btn btn-outline-secondary"
+                    class="btn btn-outline-danger"
                     type="button"
                   >
-                    Join Mission
+                    Leave Mission
                   </button>
                 </td>
               </tr>
@@ -729,6 +768,45 @@ Object {
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-md"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-6"
+        >
+          <h2>
+            My Missions
+          </h2>
+          <table
+            class="table table-bordered"
+          >
+            <tbody>
+              <tr
+                data-testid="profile-mission"
+              >
+                <td>
+                  Telstar
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="col-6"
+        >
+          <div
+            class="list-group"
+          >
+            <h2>
+              Rockets
+            </h2>
+          </div>
         </div>
       </div>
     </div>

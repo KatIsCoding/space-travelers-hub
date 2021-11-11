@@ -17,7 +17,7 @@ const Profile = () => {
               {myMissions.map((mission) => {
                 const { mission_id: id, mission_name: name } = mission;
                 return (
-                  <tr key={id}>
+                  <tr key={id} data-testid="profile-mission">
                     <td>{name}</td>
                   </tr>
                 );
