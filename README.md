@@ -26,6 +26,10 @@ To get this app running locally follow these steps:
 3. Run `npm install`
 4. Run `npm start`
 
+## Test
+
+In order to run the predefined tests for this project, run `npm run test`
+
 ## Authors
 
 👤 **Dico Diaz Dussan**
